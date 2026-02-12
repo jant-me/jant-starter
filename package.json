@@ -1,0 +1,33 @@
+{
+  "name": "jant-starter",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "npm run db:migrate:local && vite dev",
+    "dev:debug": "npm run db:migrate:local && vite dev --port 19019",
+    "build": "vite build",
+    "deploy": "npm run db:migrate:remote && npm run build && wrangler deploy",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit",
+    "db:migrate:local": "yes | wrangler d1 migrations apply DB --local",
+    "db:migrate:remote": "wrangler d1 migrations apply DB --remote",
+    "reset-password": "node scripts/reset-password.mjs"
+  },
+  "dependencies": {
+    "@jant/core": "^0.3.12"
+  },
+  "devDependencies": {
+    "@cloudflare/vite-plugin": "^1.22.1",
+    "@cloudflare/workers-types": "^4.20260131.0",
+    "@lingui/swc-plugin": "^5.10.1",
+    "@swc/core": "^1.15.11",
+    "@tailwindcss/vite": "^4.1.18",
+    "@types/node": "^22.15.4",
+    "tailwindcss": "^4.1.18",
+    "typescript": "^5.9.3",
+    "unplugin-swc": "^1.5.9",
+    "vite": "^7.3.1",
+    "wrangler": "^4.61.1"
+  }
+}
