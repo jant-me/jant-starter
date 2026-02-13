@@ -1,4 +1,4 @@
-name = "jant-starter"
+name = "my-site"
 main = "src/index.ts"
 compatibility_date = "2026-01-20"
 compatibility_flags = ["nodejs_compat"]
@@ -45,10 +45,10 @@ SITE_URL = "http://localhost:9019"
 # S3_PUBLIC_URL = "https://cdn.example.com"
 [[d1_databases]]
 binding = "DB"
-database_name = "jant-starter-db"
+database_name = "my-site-db"
 database_id = "local"
 migrations_dir = "node_modules/@jant/core/src/db/migrations"
 
 [[r2_buckets]]
 binding = "R2"
-bucket_name = "jant-starter-media"
+bucket_name = "my-site-media"

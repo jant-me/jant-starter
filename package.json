@@ -1,21 +1,22 @@
 {
-  "name": "jant-starter",
+  "name": "my-site",
   "version": "0.0.1",
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "npm run db:migrate:local && vite dev",
-    "dev:debug": "npm run db:migrate:local && vite dev --port 19019",
+    "dev": "yarn run db:migrate:local && vite dev",
+    "dev:debug": "yarn run db:migrate:local && vite dev --port 19019",
     "build": "vite build",
-    "deploy": "npm run db:migrate:remote && npm run build && wrangler deploy",
+    "deploy": "yarn run db:migrate:remote && yarn run build && wrangler deploy",
     "preview": "vite preview",
     "typecheck": "tsc --noEmit",
     "db:migrate:local": "yes | wrangler d1 migrations apply DB --local",
     "db:migrate:remote": "wrangler d1 migrations apply DB --remote",
+    "jant": "jant",
     "reset-password": "node scripts/reset-password.mjs"
   },
   "dependencies": {
-    "@jant/core": "^0.3.12"
+    "@jant/core": "^0.3.16"
   },
   "devDependencies": {
     "@cloudflare/vite-plugin": "^1.22.1",
