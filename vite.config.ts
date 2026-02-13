@@ -189,9 +189,4 @@ export default defineConfig({
     rollupOptions: {
       external: ["cloudflare:*", "__STATIC_CONTENT_MANIFEST"],
     },
-  },
-
-  resolve: {
-    alias: {    },
-  },
-});
+  },});
