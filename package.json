@@ -15,7 +15,7 @@
     "reset-password": "node scripts/reset-password.mjs"
   },
   "dependencies": {
-    "@jant/core": "^0.3.21"
+    "@jant/core": "^0.3.22"
   },
   "devDependencies": {
     "@cloudflare/vite-plugin": "^1.22.1",
@@ -24,6 +24,7 @@
     "@swc/core": "^1.15.11",
     "@tailwindcss/vite": "^4.1.18",
     "@types/node": "^22.15.4",
+    "hono": "^4.11.9",
     "tailwindcss": "^4.1.18",
     "typescript": "^5.9.3",
     "unplugin-swc": "^1.5.9",
