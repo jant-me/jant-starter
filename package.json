@@ -15,7 +15,7 @@
     "reset-password": "node scripts/reset-password.mjs"
   },
   "dependencies": {
-    "@jant/core": "^0.3.25"
+    "@jant/core": "^0.3.26"
   },
   "devDependencies": {
     "@cloudflare/vite-plugin": "^1.22.1",
