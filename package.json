@@ -3,15 +3,15 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "echo y | wrangler d1 migrations apply DB --local && wrangler dev",
-    "deploy": "wrangler d1 migrations apply DB --remote && wrangler deploy",
+    "dev": "jant migrate --local && node scripts/dev.mjs",
+    "deploy": "node ../../scripts/demo-shared/run-with-env.mjs --site demo -- pnpm exec jant deploy",
     "reset-password": "jant reset-password",
     "export": "jant export"
   },
   "dependencies": {
-    "@jant/core": "^0.3.38"
+    "@jant/core": "^0.3.39"
   },
   "devDependencies": {
-    "wrangler": "^4.61.1"
+    "wrangler": "^4.76.0"
   }
 }
