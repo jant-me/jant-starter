@@ -4,12 +4,12 @@
   "type": "module",
   "scripts": {
     "dev": "jant migrate --local && node scripts/dev.mjs",
-    "deploy": "node ../../scripts/demo-shared/run-with-env.mjs --site demo -- pnpm exec jant deploy",
+    "deploy": "jant deploy",
     "reset-password": "jant reset-password",
     "export": "jant export"
   },
   "dependencies": {
-    "@jant/core": "^0.3.43"
+    "@jant/core": "^0.3.44"
   },
   "devDependencies": {
     "wrangler": "^4.76.0"
