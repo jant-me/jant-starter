@@ -9,7 +9,7 @@
     "export": "jant export"
   },
   "dependencies": {
-    "@jant/core": "^0.6.15"
+    "@jant/core": "^0.6.16"
   },
   "devDependencies": {
     "wrangler": "^4.76.0"
