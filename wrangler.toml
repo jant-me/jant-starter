@@ -2,6 +2,11 @@ name = "my-site"
 main = "index.js"
 compatibility_date = "2026-01-20"
 compatibility_flags = ["nodejs_compat"]
+# Keep the variables you set in the Cloudflare dashboard when you deploy.
+# Without this, every deploy deletes the ones this file doesn't list. A
+# variable listed here wins over the dashboard, and removing one from this
+# file leaves it on the Worker until you delete it in the dashboard.
+keep_vars = true
 
 [assets]
 directory = "./node_modules/@jant/core/dist/client"
